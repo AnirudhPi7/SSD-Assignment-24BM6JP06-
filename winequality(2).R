@@ -1,4 +1,6 @@
-winequality <- read.csv("D://winequality-red.csv")
+if (!requireNamespace("rstudioapi", quietly = TRUE)) install.packages("rstudioapi")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+winequality <- read.csv("winequality-red.csv")
 #1. 1599 observations, 12 variables
 str(winequality)
 if (!requireNamespace("DT", quietly = TRUE)) install.packages("DT")

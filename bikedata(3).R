@@ -1,4 +1,6 @@
-bike <- read.csv("D://SeoulBikeData.csv")
+if (!requireNamespace("rstudioapi", quietly = TRUE)) install.packages("rstudioapi")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+bike <- read.csv("SeoulBikeData.csv")
 #1. 8760 observations, 14 variables
 if (!requireNamespace("DT", quietly = TRUE)) install.packages("DT")
 if (!requireNamespace("car", quietly = TRUE)) install.packages("car")
